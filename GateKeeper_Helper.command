@@ -6,7 +6,7 @@ BLU='\033[0;34m'
 NC='\033[0m'
 echo ""
 echo ""
-echo -e "GateKeeper Helper Brought to you by ${RED}AdobeZii www.adobezii.com${NC}"
+echo -e "GateKeeper Helper"
 echo ""
 echo ""
 PS3='Please enter your choice: '
