@@ -35,3 +35,6 @@ git branch -m master
 git push -f origin master
 git remote add origin github.com:markbattistella/{repo}.git
 ```
+
+## Source
+[Stackoverflow](https://stackoverflow.com/a/26000395/1086990)
