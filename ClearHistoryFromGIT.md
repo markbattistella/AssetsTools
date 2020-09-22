@@ -1,26 +1,37 @@
 # Why?
-Because sometimes I upload sensitive data and then realise after the push. You can remove it by repushing, but its still there :(
+
+Because sometimes I upload sensitive data and then realise after the push. You can remove it by re-pushing, but its still there :(
 
 # Use
-1. Go to the directory
+
+1.  Go to the directory
 ```sh
 cd ~/example
 ```
 
-1. Delete the `.git` folder
+1.  Create a "temp" branch
 ```sh
-rm -rf .git
+git checkout --orphan temp_branch
 ```
 
-1. Initialise a new repo
+1.  Add Files to Branch
 ```sh
-git init
-git add .
-git commit -m "Removed history, due to sensitive data"
+git add -A
+git commit -am "Removed history, due to sensitive data"
 ```
 
-1. Push to remote
+1.  Delete master Branch
 ```sh
+git branch -D master
+```
+
+1.  Rename Current Branch
+```sh
+git branch -m master
+```
+
+1.  Push Changes
+```sh
+git push -f origin master
 git remote add origin github.com:markbattistella/{repo}.git
-git push -u --force origin master
 ```
